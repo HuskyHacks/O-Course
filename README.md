@@ -4,6 +4,6 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 # Install
 
 - cd /opt
-- sudo git clone -git URL-
+- sudo git clone https://github.com/HuskyHacks/O-Course
 - cd o-course
 - sudo sh docker4kali.sh
