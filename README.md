@@ -3,7 +3,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 
 # Install
 
-cd /opt
-sudo git clone -git URL-
-cd o-course
-sudo sh docker4kali.sh
+- cd /opt
+- sudo git clone -git URL-
+- cd o-course
+- sudo sh docker4kali.sh
