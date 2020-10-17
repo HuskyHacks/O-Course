@@ -3,7 +3,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 
 # Setup
 
-First, we need a few tools! We'll install a Dockerized XAMPP server to host the O-Course locally.
+First, we need a few tools!
 
 - cd /opt
 - sudo git clone https://github.com/HuskyHacks/O-Course
