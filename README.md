@@ -8,7 +8,8 @@ First, we need a few tools! We'll install a Dockerized XAMPP server to host the 
 - cd /opt
 - sudo git clone https://github.com/HuskyHacks/O-Course
 - sudo chmod 755 -R /opt/O-Course && cd O-Course && sudo sh docker4kali.sh
-- docker build -t o-course .
-- docker-compose up
+- sudo docker build -t o-course .
+- sudo docker-compose up
+- (Optional) Add a fake website name to /etc/hosts that directs the web browser to your new docker XAMPP stack! Please do take care that it's not a real website! This will make scanning, directory enumeration, and finding bugs feel more fun!
 
-(Optional) Add a fake website name to /etc/hosts that directs the web browser to your new docker XAMPP stack!
+
