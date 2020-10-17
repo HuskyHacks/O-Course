@@ -5,5 +5,4 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 
 - cd /opt
 - sudo git clone https://github.com/HuskyHacks/O-Course
-- cd o-course
-- sudo sh docker4kali.sh
+- cd O-Course && sudo sh docker4kali.sh
