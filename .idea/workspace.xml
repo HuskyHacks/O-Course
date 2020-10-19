@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a2774dc-15a7-4606-810a-3a20c86766a1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j1njaRzKyK01irgUAWcf8PZXo5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/vulns/sqli" />
+      <recent name="$PROJECT_DIR$/www" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.instructions.php">
+    <configuration name="instructions.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/O-Course/www/html/about/instructions.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="sqli" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/O-Course/vulns/sqli" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.instructions.php" />
+        <item itemvalue="JavaScript Debug.sqli" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a2774dc-15a7-4606-810a-3a20c86766a1" name="Default Changelist" comment="" />
+      <created>1602980600684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602980600684</updated>
+      <workItem from="1602980601883" duration="6746000" />
+      <workItem from="1603027439139" duration="3600000" />
+      <workItem from="1603048615491" duration="2098000" />
+      <workItem from="1603063988887" duration="7399000" />
+    </task>
+    <task id="LOCAL-00001" summary="added setup.py">
+      <created>1602985463025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602985463025</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated install script, updated vulns">
+      <created>1603072680860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603072680860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added setup.py" />
+    <MESSAGE value="updated install script, updated vulns" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated install script, updated vulns" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="540" y="81" width="700" height="766" key="#PHP" timestamp="1603025562292">
+      <screen x="72" y="27" width="1646" height="861" />
+    </state>
+    <state x="540" y="81" width="700" height="766" key="#PHP/72.27.1646.861@72.27.1646.861" timestamp="1603025562292" />
+    <state x="593" y="232" width="576" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603066046081">
+      <screen x="72" y="27" width="1646" height="861" />
+    </state>
+    <state x="593" y="232" width="576" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1646.861@72.27.1646.861" timestamp="1603066046081" />
+    <state x="549" y="27" width="912" height="861" key="CommitChangelistDialog2" timestamp="1603072680730">
+      <screen x="72" y="27" width="1646" height="861" />
+    </state>
+    <state x="549" y="27" width="912" height="861" key="CommitChangelistDialog2/72.27.1646.861@72.27.1646.861" timestamp="1603072680730" />
+    <state x="670" y="355" width="399" height="156" key="NewPhpFileDialog" timestamp="1603049192639">
+      <screen x="72" y="27" width="1646" height="861" />
+    </state>
+    <state x="670" y="355" width="399" height="156" key="NewPhpFileDialog/72.27.1646.861@72.27.1646.861" timestamp="1603049192639" />
+    <state x="531" y="244" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603072684005">
+      <screen x="72" y="27" width="1646" height="861" />
+    </state>
+    <state x="531" y="244" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1646.861@72.27.1646.861" timestamp="1603072684005" />
+  </component>
+</project>
