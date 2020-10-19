@@ -10,12 +10,9 @@ import time
 import threading
 import sys
 import subprocess as sub
+from subprocess import Popen, PIPE
 import os
 import argparse
-
-
-
-
 
 logo = ("""\
 
@@ -83,7 +80,6 @@ def setup():
         print (info+"Setting up your lab now...")
         print(Style.RESET_ALL)
 
-
 def dockerInstallScript():
         os.chmod('install/docker4kali.sh', 0o755)
         sub.call("install/docker4kali.sh")
@@ -94,36 +90,42 @@ def checkDocker():
         print(info+"Checking Docker...")
         print(Style.RESET_ALL)
         time.sleep(4)
-#        result = sub.call("which docker", shell=True).decode(sys.stdout.encoding).strip()
-#        dockerPath = "/docker"
-#        if dockerPath in result:
-#            print(good+"Docker is installed!")
-#            print(Style.RESET_ALL)
-#            time.sleep(4)
-#        else:
-#             print(error+"Docker is not installed :( Try rerunning the script.")
-#             os.exit()
+        p = sub.Popen(['docker --version'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        output, error = p.communicate()
+        if p.returncode == 0:
+            print(good+"Docker is installed!")
+        elif p.returncode > 0:
+            print(error+"Docker is not installed :( Try rerunning ths script")
+            os.exit()
+        else:
+            print(error+"Some weird error...")
+            os.exit()
 
 def checkCompose():
         print("\n")
         print(info+"Checking Docker-Compose...")
         time.sleep(4)
         print("\n")
-#        p = sub.call("which docker-compose", shell=True)
-#        result = p.communicater()[0]
-#        print(result)
-#        if "/docker" in result:
-#            print(good+"Docker-Compose is installed!")
-#            print(Style.RESET_ALL)
-#            time.sleep(4)
-#        else:
-#            print(error+"Docker-compose is not installed :( Try rerunning the script.")
-#            os.exit()
+        p = sub.Popen(['docker-compose --version'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        output, error = p.communicate()
+        if p.returncode == 0:
+            print(good+"Docker-compose is installed!")
+        elif p.returncode > 0:
+            print(error+"Docker-compose is not installed :( Try rerunning ths script")
+            os.exit()
+        else:
+            print(error+"Some weird error...")
+            os.exit()
 
 def allSystemsGo():
+    print("\n")
     print(good+"All systems go!\n")
     print(good+"Good Luck!\n")
+    print(Style.RESET_ALL)
+    input("(Press Enter to launch your docker web app...)")
 
+def launchDocker():
+    sub.call(['cd /opt/O-Course/ && docker-compose up '], shell=True)
 
 def main():
     is_root()
@@ -133,6 +135,7 @@ def main():
     checkDocker()
     checkCompose()
     allSystemsGo()
+    launchDocker()
     exit()
 
 if __name__ == "__main__":
