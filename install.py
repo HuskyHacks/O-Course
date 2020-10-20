@@ -76,14 +76,12 @@ def intro():
     input("(Press Enter to continue...)")
     print("\nThe O-Course: An OWASP Top 10 Obstacle Course for Beginners\n")
     input("(Press Enter to begin setup...)")
-
-def setup():
-        print("\n")
-        print (info+"Setting up your lab now...")
-        time.sleep(2)
-        print ("\n"+info+"Checking Docker and Docker-compose...")
-        time.sleep(2)
-        print(Style.RESET_ALL)
+    print("\n")
+    print (info+"Setting up your lab now...")
+    time.sleep(2)
+    print ("\n"+info+"Checking Docker and Docker-compose...")
+    time.sleep(2)
+    print(Style.RESET_ALL)
 
 def dockerInstallScript():
         os.chmod('install/docker4kali.sh', 0o755)
@@ -161,7 +159,6 @@ def launchDocker():
 def main():
     is_root()
     intro()
-    setup()
     checkDocker()
     checkCompose()
     updateBurpMsg()
