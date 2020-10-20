@@ -7,5 +7,5 @@ $dom->loadXML($xmlfile, LIBXML_NOENT | LIBXML_DTDLOAD);
 $uservalue = simplexml_import_dom($dom);
 $value = $uservalue->value;
 
-print "Hello, Thank you for using ".$value;
+print "This is a very nice button!".$value;
 ?>

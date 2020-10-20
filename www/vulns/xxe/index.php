@@ -14,11 +14,21 @@
 
 </head>
 <body>
+
+<!-- Sidebar -->
+<div id="wrapper"></div>
+
+
+
+                    <p><br><input type="button" onclick="loadDoc();" value="Print Greeting"></p>
+
+                    <p id="demo"></p>
+
                     <script>
                         function loadDoc() {
 //create the xml payload for xml-rpc
                             var req_params;
-                            var greeting = "DVWS";
+                            var greeting = "^.^";
                             req_params = "<uservalue>\n";
                             req_params = req_params + "<value>"+ greeting + "</value>\n";
                             req_params = req_params + "</uservalue>\n";
