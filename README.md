@@ -11,6 +11,8 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 
 # To Do
 
+- [x] Install Script
+- [x] Dockerized Application
 - [x] XXE
 - [ ] SQLi
 - [ ] API Bruteforce/Info Disclosure
