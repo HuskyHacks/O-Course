@@ -11,7 +11,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 
 # To Do
 
-- [ ] XXE
+- [x] XXE
 - [ ] SQLi
 - [ ] API Bruteforce/Info Disclosure
 - [ ] Frontend/CSS
