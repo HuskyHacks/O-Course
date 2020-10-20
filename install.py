@@ -133,15 +133,14 @@ def checkCompose():
             sys.exit()
 
 def allSystemsGo():
-    print("\n")
     print(good+"All systems go!\n")
-    print(good+"Good Luck!\n")
+    time.sleep(2)
+    print(good+"Good Luck!, recruit!\n")
     print(Style.RESET_ALL)
     input("(Press Enter to launch your docker web app...)")
 
 def launchDocker():
     sub.call(['cd /opt/O-Course/ && docker-compose up '], shell=True)
-
 
 def main():
     is_root()
