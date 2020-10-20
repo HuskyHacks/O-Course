@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 
     <meta charset="utf-8">
@@ -9,33 +10,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>XML External Entity</title>
+    <title>XXE</title>
 
 </head>
 <body>
+                    <script>
+                        function loadDoc() {
+//create the xml payload for xml-rpc
+                            var req_params;
+                            var greeting = "DVWS";
+                            req_params = "<uservalue>\n";
+                            req_params = req_params + "<value>"+ greeting + "</value>\n";
+                            req_params = req_params + "</uservalue>\n";
 
 
-<!-- Sidebar -->
-<div id="wrapper">
-                    <form action="<?php $_PHP_SELF ?>" method="POST">
-                        Name: <input type="text" name="name" value="<name></name>" />
-                        <input type="submit" />
-                    </form>
+                            var xhttp;
+                            xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                                    xmlDoc = xhttp.responseText;
+                                    txt = "";
+                                    document.getElementById("demo").innerHTML = xhttp.responseText;
+                                }
+                            };
+                            xhttp.open("POST", "server.php", true);
+                            //send the request
+                            xhttp.send(req_params);
+                        }
+                    </script>
 </body>
 
-<?php
-
-if (isset( $_POST["name"]))
-{
-    if (!preg_match("/<|>/",$_POST['name'] ))           //input validation
-    {
-        die ("Error converting XML value to object");
-    }
-    $xml=simplexml_load_string($_POST['name']);       //Interprets a string of XML into an object
-    $yourname = ((string)$xml);
-    print "<br><br> Hello $yourname";
-
-    exit();
-}
-?>
 </html>
