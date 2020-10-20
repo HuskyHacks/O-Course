@@ -14,8 +14,9 @@ from subprocess import Popen, PIPE
 import os
 import argparse
 
-logo = ("""\
 
+
+logo = ("""\
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*****(/****/@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@#***&@/,,,,,,,,%@#***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -54,6 +55,7 @@ logotext = ("""\
 
                                     Production...
                       """)
+
 
 info = (Fore.BLUE + "[*] ")
 good = (Fore.GREEN + "[+] ")
@@ -121,9 +123,11 @@ def checkCompose():
         output, error = p.communicate()
         if p.returncode == 0:
             print(good+"Docker-compose is installed!")
+            time.sleep(2)
             print(Style.RESET_ALL)
         elif p.returncode > 0:
             print(info+"Docker-compose is not installed. Running Install script!")
+            time.sleep(2)
             print(Style.RESET_ALL)
             composeInstallScript()
         else:
@@ -136,25 +140,13 @@ def updateBurp():
         time.sleep(2)
         print("\n")
 
-def updateBurpCheck():
+def updateBurpMsg():
     print(info+"Kali 2020.3 comes pre-installed with Burpsuite Community Edition...\n")
-    print(info+"But I recommend updating to the newest version!\n")
-    while True:
-         query = input(info+'Would you like to update Burpsuite?'+Fore.GREEN+"[RECOMMENDED]"+Fore.BLUE+'[y/n]')
-         print(Style.RESET_ALL)
-         Fl = query[:1].lower()
-         if query == '' or not Fl in ['y','n']:
-            print(error+'Please answer with [y/n]!')
-            print(Style.RESET_ALL)
-         else:
-            break
-    if Fl == 'y':
-        print(Style.RESET_ALL)
-        updateBurp()
-        return
-    if Fl == 'n':
-        return
-
+    time.sleep(2)
+    print(info+"But I recommend updating to the newest version! Among other things, it has the embedded proxy enabled browser -chef's kiss-\n")
+    time.sleep(2)
+    print(info+"Visit https://portswigger.net/burp/releases/professional-community-2020-9-2\ to download it!\n")
+    time.sleep(2)
 
 def allSystemsGo():
     print(good+"All systems go!\n")
@@ -172,7 +164,7 @@ def main():
     setup()
     checkDocker()
     checkCompose()
-    updateBurpCheck()
+    updateBurpMsg()
     allSystemsGo()
     launchDocker()
     exit()
