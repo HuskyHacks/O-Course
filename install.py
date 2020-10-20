@@ -78,33 +78,37 @@ def intro():
 def setup():
         print("\n")
         print (info+"Setting up your lab now...")
+        time.sleep(2)
         print ("\n"+info+"Checking Docker and Docker-compose...")
+        time.sleep(2)
         print(Style.RESET_ALL)
 
 def dockerInstallScript():
         os.chmod('install/docker4kali.sh', 0o755)
         sub.call("install/docker4kali.sh")
-        time.sleep(4)
+        time.sleep(2)
         print("\n")
 
 def composeInstallScript():
         os.chmod('install/compose4kali.sh', 0o755)
         sub.call("install/compose4kali.sh")
-        time.sleep(4)
+        time.sleep(2)
         print("\n")
 
 def checkDocker():
         print(info+"Checking Docker...")
         print(Style.RESET_ALL)
-        time.sleep(4)
+        time.sleep(2)
         p = sub.Popen(['docker --version'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
         output, error = p.communicate()
         if p.returncode == 0:
             print(good+"Docker is installed!")
             print(Style.RESET_ALL)
+            time.sleep(2)
         elif p.returncode > 0:
             print(info+"Docker is not installed. Running Install script!")
             print(Style.RESET_ALL)
+            time.sleep(2)
             dockerInstallScript()
         else:
             print(error+"Some weird error...")
@@ -113,7 +117,7 @@ def checkDocker():
 def checkCompose():
         print("\n")
         print(info+"Checking Docker-Compose...")
-        time.sleep(4)
+        time.sleep(2)
         print("\n")
         p = sub.Popen(['docker-compose --version'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
         output, error = p.communicate()
@@ -137,6 +141,7 @@ def allSystemsGo():
 
 def launchDocker():
     sub.call(['cd /opt/O-Course/ && docker-compose up '], shell=True)
+
 
 def main():
     is_root()
