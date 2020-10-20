@@ -1,6 +1,9 @@
 # O-Course
 A simple web application vulnerability lab made for the HackerOne Veterans day event
 
+# Warning
+**This is an intentionally vulnerable application! Do not host this on an internet facing server!**
+
 # Setup
 
 - cd /opt
