@@ -101,13 +101,14 @@ def checkDocker():
         output, error = p.communicate()
         if p.returncode == 0:
             print(good+"Docker is installed!")
+            print(Style.RESET_ALL)
         elif p.returncode > 0:
             print(info+"Docker is not installed. Running Install script!")
+            print(Style.RESET_ALL)
             dockerInstallScript()
-            os.exit()
         else:
             print(error+"Some weird error...")
-            os.exit()
+            sys.exit()
 
 def checkCompose():
         print("\n")
@@ -118,12 +119,14 @@ def checkCompose():
         output, error = p.communicate()
         if p.returncode == 0:
             print(good+"Docker-compose is installed!")
+            print(Style.RESET_ALL)
         elif p.returncode > 0:
-            print(info+"Docker is not installed. Running Install script!")
+            print(info+"Docker-compose is not installed. Running Install script!")
+            print(Style.RESET_ALL)
             composeInstallScript()
         else:
             print(error+"Some weird error...")
-            os.exit()
+            sys.exit()
 
 def allSystemsGo():
     print("\n")
