@@ -115,10 +115,8 @@ def checkDocker():
             sys.exit()
 
 def checkCompose():
-        print("\n")
-        print(info+"Checking Docker-Compose...")
+        print(info+"Checking Docker-Compose...\n")
         time.sleep(2)
-        print("\n")
         p = sub.Popen(['docker-compose --version'], shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
         output, error = p.communicate()
         if p.returncode == 0:
@@ -135,12 +133,12 @@ def checkCompose():
 def allSystemsGo():
     print(good+"All systems go!\n")
     time.sleep(2)
-    print(good+"Good Luck!, recruit!\n")
+    print(good+"Good Luck, recruit!\n")
     print(Style.RESET_ALL)
     input("(Press Enter to launch your docker web app...)")
 
 def launchDocker():
-    sub.call(['cd /opt/O-Course/ && docker-compose up '], shell=True)
+    sub.call(['docker-compose up'], shell=True)
 
 def main():
     is_root()
