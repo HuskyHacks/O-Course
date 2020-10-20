@@ -78,11 +78,18 @@ def intro():
 def setup():
         print("\n")
         print (info+"Setting up your lab now...")
+        print ("\n"+info+"Checking Docker and Docker-compose...")
         print(Style.RESET_ALL)
 
 def dockerInstallScript():
         os.chmod('install/docker4kali.sh', 0o755)
         sub.call("install/docker4kali.sh")
+        time.sleep(4)
+        print("\n")
+
+def composeInstallScript():
+        os.chmod('install/compose4kali.sh', 0o755)
+        sub.call("install/compose4kali.sh")
         time.sleep(4)
         print("\n")
 
@@ -95,7 +102,8 @@ def checkDocker():
         if p.returncode == 0:
             print(good+"Docker is installed!")
         elif p.returncode > 0:
-            print(error+"Docker is not installed :( Try rerunning ths script")
+            print(info+"Docker is not installed. Running Install script!")
+            dockerInstallScript()
             os.exit()
         else:
             print(error+"Some weird error...")
@@ -111,8 +119,8 @@ def checkCompose():
         if p.returncode == 0:
             print(good+"Docker-compose is installed!")
         elif p.returncode > 0:
-            print(error+"Docker-compose is not installed :( Try rerunning ths script")
-            os.exit()
+            print(info+"Docker is not installed. Running Install script!")
+            composeInstallScript()
         else:
             print(error+"Some weird error...")
             os.exit()
@@ -131,7 +139,6 @@ def main():
     is_root()
     intro()
     setup()
-    dockerInstallScript()
     checkDocker()
     checkCompose()
     allSystemsGo()
