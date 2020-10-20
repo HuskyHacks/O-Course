@@ -130,6 +130,32 @@ def checkCompose():
             print(error+"Some weird error...")
             sys.exit()
 
+def updateBurp():
+        os.chmod("install/burpsuite_commnity_2020_9_2.sh", 0o755)
+        sub.call("install/burpsuite_commnity_2020_9_2.sh")
+        time.sleep(2)
+        print("\n")
+
+def updateBurpCheck():
+    print(info+"Kali 2020.3 comes pre-installed with Burpsuite Community Edition...\n")
+    print(info+"But I recommend updating to the newest version!\n")
+    while True:
+         query = input(info+'Would you like to update Burpsuite?'+Fore.GREEN+"[RECOMMENDED]"+Fore.BLUE+'[y/n]')
+         print(Style.RESET_ALL)
+         Fl = query[:1].lower()
+         if query == '' or not Fl in ['y','n']:
+            print(error+'Please answer with [y/n]!')
+            print(Style.RESET_ALL)
+         else:
+            break
+    if Fl == 'y':
+        print(Style.RESET_ALL)
+        updateBurp()
+        return
+    if Fl == 'n':
+        return
+
+
 def allSystemsGo():
     print(good+"All systems go!\n")
     time.sleep(2)
@@ -146,6 +172,7 @@ def main():
     setup()
     checkDocker()
     checkCompose()
+    updateBurpCheck()
     allSystemsGo()
     launchDocker()
     exit()
