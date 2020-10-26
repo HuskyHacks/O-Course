@@ -30,3 +30,4 @@ Huge thank you to:
 - HackerOne
 - SnoopySecurity: https://github.com/snoopysecurity/dvws
 - OWASP JuiceShope: https://github.com/bkimminich/juice-shop
+- Learn-by-doing XSS lab: https://github.com/Learn-by-doing/xss
