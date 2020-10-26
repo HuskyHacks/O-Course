@@ -21,6 +21,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 - [ ] SQLi
 - [ ] API Bruteforce/Info Disclosure
 - [ ] Frontend/CSS
+- [ ] Easter Egg/Dirbusting artifact
 - [ ] Student Guide/Walkthrough
 
 
