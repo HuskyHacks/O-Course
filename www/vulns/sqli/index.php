@@ -52,7 +52,7 @@ if(empty($username_err) && empty($password_err)){
 // Prepare a select statement
 $sql = "SELECT id, name FROM users WHERE username = '$username' && password = '$password'";
 
-    if($stmt = mysqli_prepare($link, $sql)){
+    if($stmt = mysqli_prepare($conn, $sql)){
 
 // Attempt to execute the prepared statement
 if(mysqli_stmt_execute($stmt)){
@@ -141,9 +141,5 @@ mysqli_close($link);
                         request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');  // Tells server that this call is made for ajax purposes.
                         request.send(null);  // No data needs to be sent along with the request.
                     </script>
-
-
-                    <br><br>
-                    REST API URL: <a href="/<?php echo "$dir//sqli/api.php/users/2\">/sqli/api.php/users/2</a>"; ?>
    </body>
 </html>

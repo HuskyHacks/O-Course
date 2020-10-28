@@ -1,16 +1,13 @@
 <?php
-session_start();
+$servername = "webDB";
+$username = "root";
+$password = "rootpassword";
+$dbname = "webdb";
 
-
-$host = "mysql"; /* Host name */
-$user = getenv("MYSQL_USER"); /* User */
-$password = getenv("MYSQL_PASSWORD"); /* Password */
-$dbname = getenv("MYSQL_DATABASE"); /* Database name */
-
-// Connect to local MySql Database
-$link = mysqli_connect($host, $user, $password, $dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check the connection
-if (!$link) {
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
