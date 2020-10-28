@@ -30,7 +30,7 @@ This project was rapid prototyped to provide an engaging course in web applicati
 Huge thank you to:
 - HackerOne
 - SnoopySecurity: https://github.com/snoopysecurity/dvws
-- OWASP JuiceShope: https://github.com/bkimminich/juice-shop
+- OWASP JuiceShop: https://github.com/bkimminich/juice-shop
 - Learn-by-doing XSS lab: https://github.com/Learn-by-doing/xss
 - https://github.com/bidyashish/php-api
 - https://github.com/BrunoMendes41/simple-php-restful-api
