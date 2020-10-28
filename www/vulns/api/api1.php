@@ -8,17 +8,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(is_array($data)){
         //check for all variables to be NOT NUll
         $uid = isset($data['user_id']) ? $data['user_id'] : '';
-        $male = isset($data['male']) ? $data['male'] : '';
-        $female = isset($data['female']) ? $data['female'] : '';
+        $phone= isset($data['phone']) ? $data['phone'] : '';
+        $socialsecnumber = isset($data['socialsecnumber']) ? $data['socialsecnumber'] : '';
 
 
         //check all variales value received are in INTEGER only others type NOT allowed such as float and string
-        if(is_int($uid) && is_int($male) && is_int($female)) {
+        if(is_int($uid) && is_int($phone) && is_int($socialsecnumber)) {
             //MYSQL connection for POSTING JSON variable to database
-            $servername = "website";
+            $servername = "webDB";
             $username = "root";
             $password = "rootpassword";
-            $dbname = "userID";
+            $dbname = "website";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "INSERT INTO user (user_id, male, female )
-			VALUES ('$uid','$male','$female')";
+            $sql = "INSERT INTO user (user_id, phone, socialsecnumber )
+			VALUES ('$uid','$phone','$socialsecnumber')";
 
             if ($conn->query($sql) === TRUE) {
                 // echo "sucessfully saved";

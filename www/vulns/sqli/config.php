@@ -2,7 +2,7 @@
 $servername = "webDB";
 $username = "root";
 $password = "rootpassword";
-$dbname = "webdb";
+$dbname = "website";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

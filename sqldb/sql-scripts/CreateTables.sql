@@ -5,8 +5,8 @@ username VARCHAR(80),
 name VARCHAR(80),
 password VARCHAR(80));
 
-CREATE TABLE `userID`(
+CREATE TABLE `userInfo`(
 `user_id` int(6) NOT NULL,
-`male` int(6) NOT NULL,
-`female` int(6) NOT NULL
+`phone` int(9) NOT NULL,
+`socialsecnumber` int(9) NOT NULL
  )
