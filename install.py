@@ -84,14 +84,14 @@ def intro():
     print(Style.RESET_ALL)
 
 def dockerInstallScript():
-        os.chmod('scripts4install/docker4kali.sh', 0o755)
-        sub.call("scripts4install/docker4kali.sh")
+        os.chmod('scripts4Install/docker4kali.sh', 0o755)
+        sub.call("scripts4Install/docker4kali.sh")
         time.sleep(2)
         print("\n")
 
 def composeInstallScript():
-        os.chmod('scripts4install/compose4kali.sh', 0o755)
-        sub.call("scripts4install/compose4kali.sh")
+        os.chmod('scripts4Install/compose4kali.sh', 0o755)
+        sub.call("scripts4Install/compose4kali.sh")
         time.sleep(2)
         print("\n")
 
