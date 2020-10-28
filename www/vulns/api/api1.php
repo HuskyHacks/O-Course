@@ -15,10 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //check all variales value received are in INTEGER only others type NOT allowed such as float and string
         if(is_int($uid) && is_int($male) && is_int($female)) {
             //MYSQL connection for POSTING JSON variable to database
-            $servername = "webDB";
+            $servername = "website";
             $username = "root";
             $password = "rootpassword";
-            $dbname = "user";
+            $dbname = "userID";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
