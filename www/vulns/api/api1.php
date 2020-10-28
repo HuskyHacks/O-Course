@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $servername = "webDB";
             $username = "root";
             $password = "rootpassword";
-            $dbname = "emp";
+            $dbname = "user";
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
