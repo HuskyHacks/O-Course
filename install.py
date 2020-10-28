@@ -84,14 +84,14 @@ def intro():
     print(Style.RESET_ALL)
 
 def dockerInstallScript():
-        os.chmod('install/docker4kali.sh', 0o755)
-        sub.call("install/docker4kali.sh")
+        os.chmod('scripts4install/docker4kali.sh', 0o755)
+        sub.call("scripts4install/docker4kali.sh")
         time.sleep(2)
         print("\n")
 
 def composeInstallScript():
-        os.chmod('install/compose4kali.sh', 0o755)
-        sub.call("install/compose4kali.sh")
+        os.chmod('scripts4install/compose4kali.sh', 0o755)
+        sub.call("scripts4install/compose4kali.sh")
         time.sleep(2)
         print("\n")
 
@@ -131,12 +131,6 @@ def checkCompose():
         else:
             print(error+"Some weird error...")
             sys.exit()
-
-def updateBurp():
-        os.chmod("install/burpsuite_commnity_2020_9_2.sh", 0o755)
-        sub.call("install/burpsuite_commnity_2020_9_2.sh")
-        time.sleep(2)
-        print("\n")
 
 def updateBurpMsg():
     print(info+"Kali 2020.3 comes pre-installed with Burpsuite Community Edition...\n")
