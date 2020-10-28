@@ -20,7 +20,7 @@ services:
                         - 3306:3306
                 environment:
                         MYSQL_USER: mysql
-                        MYSQL_DATABASE: webDB
+                        MYSQL_DATABASE: website
                         MYSQL_ROOT_PASSWORD: rootpassword
                         MYSQL_PASSWORD: password123!
                 networks:
