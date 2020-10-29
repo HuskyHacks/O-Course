@@ -78,8 +78,6 @@ $_SESSION["name"] = $name;
 mysqli_stmt_close($stmt);
 mysqli_close($link);
 
-echo "PWNED :)";
-
 exit();
 } else {
 $password_err = "Username/password combination not valid";
