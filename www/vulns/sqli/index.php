@@ -72,10 +72,14 @@ $_SESSION["id"] = $id;
 $_SESSION["username"] = $username;
 $_SESSION["name"] = $name;
 
+
+
 // Redirect to welcome landing
 mysqli_stmt_close($stmt);
 mysqli_close($link);
-header("location: welcome.php");
+
+echo "PWNED :)";
+
 exit();
 } else {
 $password_err = "Username/password combination not valid";
@@ -100,7 +104,7 @@ mysqli_close($link);
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="layout.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
@@ -130,16 +134,5 @@ mysqli_close($link);
         </form>
     </div>
 </div>
-                    <script>
-                        var request = new XMLHttpRequest();
-                        request.onreadystatechange = function() {
-                            if (request.readyState == 4 && request.status == 200) {
-                                document.getElementById("demo").innerHTML = this.responseText;
-                            }
-                        };
-                        request.open('GET', 'api.php/users/2', true);
-                        request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');  // Tells server that this call is made for ajax purposes.
-                        request.send(null);  // No data needs to be sent along with the request.
-                    </script>
    </body>
 </html>

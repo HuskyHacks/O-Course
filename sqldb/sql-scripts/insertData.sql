@@ -5,5 +5,4 @@ INSERT INTO users (username, name, password) VALUES ('hackinJohnny', 'johnny', '
 INSERT INTO users (username, name, password) VALUES ('ferris', 'francis erris', 'UtheManNowD0g');
 INSERT INTO users (username, name, password) VALUES ('aGentlemen', 'andreGentleman', 'theGentlemanApproacheth');
 INSERT INTO users (username, name, password) VALUES ('cosmo', 'cosmo kiely', 'pidgeboi2018');
-
-INSERT INTO userInfo (user_id, phone, socialsecnumber) VALUES ('61020', '8881119999', '0000000000');
+INSERT INTO userInfo (user_id, phone, socialsecnumber) VALUES ('610202', '8881119999', '9999999999');
