@@ -6,7 +6,7 @@ name VARCHAR(80),
 password VARCHAR(80));
 
 CREATE TABLE `userInfo`(
-`user_id` int(6) NOT NULL,
-`phone` int(7) NOT NULL,
-`socialsecnumber` int(9) NOT NULL
+`user_id` varchar(6) NOT NULL,
+`phone` varchar(7) NOT NULL,
+`socialsecnumber` varchar(9) NOT NULL
  )
