@@ -20,8 +20,8 @@ require_once "config.php";
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-header("location: welcome.php");
-exit();
+    header("location: welcome.php");
+    exit();
 }
 
 // Define variables and initialize with empty values
@@ -32,68 +32,69 @@ $username_err = $password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // Check if username is empty
-if(empty(trim($_POST["username"]))){
-$username_err = "Please enter username.";
-} else{
-$username = trim($_POST["username"]);
-}
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Please enter username.";
+    } else{
+        $username = trim($_POST["username"]);
+    }
 
 // Check if password is empty
-if(empty(trim($_POST["password"]))){
-$password_err = "Please enter your password.";
-} else{
-$password = $_POST["password"];
-}
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter your password.";
+    } else{
+        $password = $_POST["password"];
+    }
 
 // CHANGE SQL SELECT STATEMENT TO REMOVE SQL INJECT VULN
 
 // Validate credentials
-if(empty($username_err) && empty($password_err)){
+    if(empty($username_err) && empty($password_err)){
 // Prepare a select statement
-$sql = "SELECT id, name FROM users WHERE username = '$username' && password = '$password'";
+        $sql = "SELECT id, name FROM users WHERE username = '$username' && password = '$password'";
 
-    if($stmt = mysqli_prepare($conn, $sql)){
+        if($stmt = mysqli_prepare($conn, $sql)){
 
 // Attempt to execute the prepared statement
-if(mysqli_stmt_execute($stmt)){
+            if(mysqli_stmt_execute($stmt)){
 // Store result
-mysqli_stmt_store_result($stmt);
+                mysqli_stmt_store_result($stmt);
 
 // Check if username exists, if yes then verify password
-if(mysqli_stmt_num_rows($stmt) >= 1) {
+                if(mysqli_stmt_num_rows($stmt) >= 1) {
 
-mysqli_stmt_bind_result($stmt, $id, $name);
+                    mysqli_stmt_bind_result($stmt, $id, $name);
 
 //fetch results from query and put into session
-if(mysqli_stmt_fetch($stmt)) {
+                    if(mysqli_stmt_fetch($stmt)) {
 
-$_SESSION["loggedin"] = true;
-$_SESSION["id"] = $id;
-$_SESSION["username"] = $username;
-$_SESSION["name"] = $name;
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["id"] = $id;
+                        $_SESSION["username"] = $username;
+                        $_SESSION["name"] = $name;
 
 
 
 // Redirect to welcome landing
-mysqli_stmt_close($stmt);
-mysqli_close($link);
+                        mysqli_stmt_close($stmt);
 
-exit();
-} else {
-$password_err = "Username/password combination not valid";
-$username_err = "Username/password combination not valid";
-}
+                        echo "PWNED :)";
 
-}
-}
+                        exit();
+                    } else {
+                        $password_err = "Username/password combination not valid";
+                        $username_err = "Username/password combination not valid";
+                    }
+
+                }
+            }
 
 // Close statement
-mysqli_stmt_close($stmt);
-}
-}
+            mysqli_stmt_close($stmt);
+        }
+    }
 
 // Close connection
-mysqli_close($link);
+    mysqli_close();
 }
 ?>
 
@@ -102,7 +103,6 @@ mysqli_close($link);
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="layout.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
@@ -132,5 +132,5 @@ mysqli_close($link);
         </form>
     </div>
 </div>
-   </body>
+</body>
 </html>
