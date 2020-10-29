@@ -7,6 +7,6 @@ password VARCHAR(80));
 
 CREATE TABLE `userInfo`(
 `user_id` int(6) NOT NULL,
-`phone` int(9) NOT NULL,
+`phone` int(10) NOT NULL,
 `socialsecnumber` int(9) NOT NULL
  )
