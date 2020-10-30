@@ -207,6 +207,7 @@ def allSystemsGo():
     time.sleep(2)
     print(good+"Good Luck, recruit!\n")
     print(Style.RESET_ALL)
+    time.sleep(1)
     input("(Press Enter to launch your docker web app...)")
 
 def launchDocker():
