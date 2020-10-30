@@ -18,7 +18,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 - [x] Dockerized Application
 - [x] XXE
 - [x] XSS
-- [ ] SQLi
+- [x] SQLi
 - [ ] API Bruteforce/Info Disclosure
 - [ ] Frontend/CSS
 - [ ] Easter Egg/Dirbusting artifact
