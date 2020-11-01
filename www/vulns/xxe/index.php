@@ -92,7 +92,7 @@
                                     <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
                                     <div id="spoiler4" style="display:none">
                                         In Burp Repeater, replace the captured XML block with this:
-
+                                        <img src="../../../../../images/demo/xmlscreenshot.png">
                                     </div>
 
                                     <!-- article 2 -->
