@@ -128,7 +128,11 @@
             <!-- ########################################################################################## -->
             <section id="services" class="last clear">
                 <!-- article 1 -->
-
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">REVEAL ANSWER</button>
+                <div id="spoiler" style="display:none">
+                    %3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{glory_of_the_cross}')%22%3E
+                </div>
+                </div>
                 <!-- article 2 -->
 
             </section>
