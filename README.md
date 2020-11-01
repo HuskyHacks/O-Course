@@ -9,7 +9,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans Day e
 - `cd /opt`
 - `sudo git clone https://github.com/HuskyHacks/O-Course`
 - `sudo chmod 755 -R /opt/O-Course && cd O-Course && sudo python3 install.py`
-- Browse to 172.17.0.1 OR your fake website name to launch the course!
+- Browse to 172.17.0.1 to launch the course!
 
 # To Do
 
