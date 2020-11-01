@@ -15,10 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$result = array();
 		while($r = mysqli_fetch_array($get_data_query)){
 			extract($r);
-            $user_id ='';
-            $phone = '';
-            $socialsecnumber = '';
-            $description = '';
             $result[] = array("UID" => $user_id, "Phone" => $phone, 'SSN' => $socialsecnumber, "Desc" => $description);
 		}
 		$json = array("status" => 1, "info" => $result);
