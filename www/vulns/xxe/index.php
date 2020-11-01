@@ -88,7 +88,7 @@
 
                                     <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                                     <div id="spoiler3" style="display:none">
-                                        Remember, XML external entities
+                                        Remember, XML external entities can be used to read local files from the web server. Craft an XML entity that uses <code>SYSTEM "file:///etc/passwd"</code> to read the <code>passwd</code> file from the file system.
                                     </div>
 
                                     <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>

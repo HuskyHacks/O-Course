@@ -30,7 +30,7 @@
             <p>First up, our warm up! The Logs look a lot worse than they really are.</p>
             <p>That search bar down below this section is vulnerable to XSS. Give it a shot!</p>
 
-            <a href="/index.html" class="previous">&laquo; Previous</a>
+            <a href="/nav.html" class="previous">&laquo; Previous</a>
             <a href="/vulns/xxe/" class="next">Next &raquo;</a>
         </section>
 

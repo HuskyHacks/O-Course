@@ -33,7 +33,7 @@
             <p> Then, blow the doors off with SQLmap and call it a day!</p>
 
             <a href="/vulns/" class="previous">&laquo; Previous</a>
-            <a href="/vulns/" class="next">Next &raquo;</a>
+            <a href="/finish.html" class="next">Next &raquo;</a>
         </section>
 
         <!-- content body -->
