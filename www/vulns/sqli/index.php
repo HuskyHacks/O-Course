@@ -18,7 +18,7 @@
 
 require_once "config.php";
 
-// Check if the index.php is already logged in, if yes then redirect him to welcome page
+// Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
     exit();
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 // Validate credentials
     if(empty($username_err) && empty($password_err)){
 // Prepare a select statement
-        $sql = "SELECT id, name FROM index.php WHERE username = '$username' && password = '$password'";
+        $sql = "SELECT id, name FROM users WHERE username = '$username' && password = '$password'";
 
         if($stmt = mysqli_prepare($conn, $sql)){
 
@@ -72,13 +72,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $_SESSION["username"] = $username;
                         $_SESSION["name"] = $name;
 
-
-
 // Redirect to welcome landing
                         mysqli_stmt_close($stmt);
 
                         echo "PWNED :)";
-
+                        mysqli_close();
                         exit();
                     } else {
                         $password_err = "Username/password combination not valid";
@@ -94,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
 // Close connection
-    mysqli_close();
+    mysqli_close($conn);
 }
 ?>
 
@@ -103,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="layout.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
