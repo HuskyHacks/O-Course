@@ -35,3 +35,4 @@ Huge thank you to:
 - Learn-by-doing XSS lab: https://github.com/Learn-by-doing/xss
 - https://github.com/bidyashish/php-api
 - https://github.com/BrunoMendes41/simple-php-restful-api
+- https://medium.com/@shashanksrivastava/create-a-rest-api-using-php-mysql-60ba1ad918d2
