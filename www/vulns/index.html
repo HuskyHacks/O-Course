@@ -29,6 +29,7 @@
             <h1>API Bruteforce/Information Disclosure: The Quigley</h1>
             <p>Don't get scared now! We're just getting going.</p>
             <p>You won't be able to see this next vulnerability immediately; you gotta go find it. So take a deep breath, and plunge!</p>
+            <p>You're currently in the <code>/vulns/</code> directory. There is an API that is accessible from your current directory, but you have to go find it.</p>
             <p>Break out your best directory busting tools and go hunting for some APIs!</p>
             <a href="/vulns/xxe/" class="previous">&laquo; Previous</a>
             <a href="/vulns/sqli/" class="next">Next &raquo;</a>
@@ -41,14 +42,12 @@
                 <!-- article 1 -->
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
                 <div id="spoiler1" style="display:none">
-                    <p>You'll have to directory bust a few times here; once to find the main API directory and subdirectories, and once to find the API itself. A good API worldist will probably help, so check this one out: <a href="https://github.com/chrislockard/api_wordlist" target="_blank"> chrislockard/api_wordlist</a></p>
-                    <p> Download the API wordlist with: <code> sudo git clone https://github.com/chrislockard/api_wordlist.git </code></p>
-                    <p>Then, try using dirb: <code>dirb http://172.17.0.1/vulns/ /[path]/[to]/[api]/[wordlists]/common_paths.txt</code></p>
+                    <p>The API is not immediately accessible from the <code>/vulns/</code> directory. In fact, it's a few directories down. APIs are often nested inside of many sub-directories. So you'll need to drill down a little bit to find it.</p>
+                    <p>Try using dirb: <code>dirb http://[IP]/vulns/</code></p>
                 </div>
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
-
                 </div>
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
