@@ -1,5 +1,5 @@
 # O-Course
-A simple web application vulnerability lab made for the HackerOne Veterans day event
+A simple web application vulnerability lab made for the HackerOne Veterans Day event
 
 # Warning
 **This is an intentionally vulnerable application! Do not host this on an internet facing server!**
@@ -19,11 +19,10 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 - [x] XXE
 - [x] XSS
 - [x] SQLi
-- [ / ] API Bruteforce/Info Disclosure
+- [x] API Bruteforce/Info Disclosure
 - [ / ] Frontend/CSS
 - [ / ] Student Guide/Walkthrough
 - [ / ] Hints
-
 - [ ] Easter Egg/Dirbusting artifact
 
 # Acknowledgements

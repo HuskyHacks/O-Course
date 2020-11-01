@@ -15,7 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$result = array();
 		while($r = mysqli_fetch_array($get_data_query)){
 			extract($r);
-			$result[] = array("UID" => $user_id, "Phone" => $phone, 'SSN' => $socialsecnumber, "Desc" => $description);
+            $user_id ='';
+            $phone = '';
+            $socialsecnumber = '';
+            $description = '';
+            $result[] = array("UID" => $user_id, "Phone" => $phone, 'SSN' => $socialsecnumber, "Desc" => $description);
 		}
 		$json = array("status" => 1, "info" => $result);
 	}
@@ -32,7 +36,7 @@ echo json_encode($json);
 elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // receive json from url and deocode and store in data
     $data = json_decode(file_get_contents('php://input'), true);
-    //check if received all neccessary json format using is array
+    //check if received all necessary json format using is array
     if(is_array($data)){
         //check for all variables to be NOT NUll
         $uid = isset($data['user_id']) ? $data['user_id'] : '';
@@ -40,7 +44,7 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $socialsecnumber = isset($data['socialsecnumber']) ? $data['socialsecnumber'] : '';
 
 
-        //check all variales value received are in INTEGER only others type NOT allowed such as float and string
+        //check all variables value received are in INTEGER only others type NOT allowed such as float and string
         if(is_int($uid) && is_int($phone) && is_int($socialsecnumber)) {
             //MYSQL connection for POSTING JSON variable to database
 
@@ -55,8 +59,7 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			VALUES ('$uid','$phone','$socialsecnumber')";
 
             if ($conn->query($sql) === TRUE) {
-                // echo "sucessfully saved";
-
+                echo "Connection ok!";
             } else {
                 echo json_encode(array( 'Error'=>'Database Error.'),true);
             }
@@ -68,7 +71,6 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $myObj->success = $uid;
             $myJSON = json_encode($myObj);
             echo $myJSON;
-            // after receiveing correct JSON Response with  JSON , success as KEY and UId as value
         }
         else
             // error to handle JSON KEY  value should be in INteger and as per format
@@ -81,4 +83,4 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 else
     echo json_encode(array( 'API'=>'server is working fine.'),true);
-?>
+
