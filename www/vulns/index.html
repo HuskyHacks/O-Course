@@ -1,1 +1,81 @@
-<!--hello :)-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>The O-Course</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../../../styles/layout.css" type="text/css">
+    <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div class="wrapper row1">
+    <header id="header" class="clear">
+
+        <div id="hgroup">
+            <h1><a href="#">The O-Course</a></h1>
+            <h2>An OWASP Top 10 Obstacle Course for Beginners</h2>
+        </div>
+        <nav>
+            <div class="logo">
+                <img src="../../../../../images/demo/logo.png">
+            </div>
+        </nav>
+    </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+    <div id="container" class="clear">
+        <section id="slider"><a href="#"><img src="../../../../../images/demo/quigley.jpg" alt=""></a></section>
+        <section id="shout">
+            <h1>API Bruteforce/Information Disclosure: The Quigley</h1>
+            <p>Don't get scared now! We're just getting going.</p>
+            <p>You won't be able to see this next vulnerability immediately; you gotta go find it. So take a deep breath, and plunge!</p>
+            <p>Break out your best directory busting tools and go hunting for some APIs!</p>
+            <a href="/vulns/xxe/" class="previous">&laquo; Previous</a>
+            <a href="/vulns/sqli/" class="next">Next &raquo;</a>
+        </section>
+
+        <!-- content body -->
+        <div id="content">
+            <!-- main content -->
+            <section id="services" class="last clear">
+                <!-- article 1 -->
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
+                <div id="spoiler1" style="display:none">
+                    <p>You'll have to directory bust a few times here; once to find the main API directory and subdirectories, and once to find the API itself. A good API worldist will probably help, so check this one out: <a href="https://github.com/chrislockard/api_wordlist" target="_blank"> chrislockard/api_wordlist</a></p>
+                    <p> Download the API wordlist with: <code> sudo git clone https://github.com/chrislockard/api_wordlist.git </code></p>
+                    <p>Then, try using dirb: <code>dirb http://172.17.0.1/vulns/ /[path]/[to]/[api]/[wordlists]/common_paths.txt</code></p>
+                </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
+                <div id="spoiler2" style="display:none">
+
+                </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
+                <div id="spoiler3" style="display:none">
+
+                </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
+                <div id="spoiler4" style="display:none">
+
+                </div>
+
+                <!-- article 2 -->
+
+            </section>
+        </div>
+        <!-- / content body -->
+    </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+    <footer id="footer" class="clear">
+        <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="https://huskyhacks.dev">HuskyHacks</a></p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    </footer>
+</div>
+</body>
+</html>
+
+

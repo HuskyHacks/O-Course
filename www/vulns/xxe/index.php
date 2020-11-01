@@ -28,10 +28,12 @@
                             <section id="shout">
                                 <h1>eXternal XML Entity (XXE) Injection: Low Crawl</h1>
                                 <p>Not bad, recruit! Good work on the logs. Now let's move on to something a little more involved.</p>
-                                <p>In the section below, you'll find a very, very nice button. This button is vulnerable to XXE. Take it down!</p>
+                                <p>In the section below, you'll find a very, very nice button. This button is vulnerable to XXE. </p>
+                                <p>There's an interesting user inside of this container, see if you can find their name by using an XXE injection to access the <code>/etc/passwd</code> file.</p>
+                                <p>Ready? Go!</p>
 
                                 <a href="/vulns/xss/welcome.php" class="previous">&laquo; Previous</a>
-                                <a href="/vulns/xxe/" class="next">Next &raquo;</a>
+                                <a href="/vulns/" class="next">Next &raquo;</a>
                             </section>
 
                             <!-- content body -->
@@ -86,7 +88,7 @@
 
                                     <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                                     <div id="spoiler3" style="display:none">
-
+                                        Remember, XML external entities
                                     </div>
 
                                     <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>

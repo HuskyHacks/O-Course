@@ -17,13 +17,7 @@ html[xmlns] .clear{display:block;}
 
 a{outline:none; text-decoration:none;}
 
-code {
-    font-family: Consolas,"courier new";
-    color: crimson;
-    background-color: #f1f1f1;
-    padding: 2px;
-    font-size: 105%;
-}
+
 
 .fl_left{float:left;}
 .fl_right{float:right;}
@@ -99,6 +93,14 @@ blockquote:after, q:after{content:' �'; font-size:26px; line-height:0;}
 #container #shout h1{font-size:36px; font-weight:normal; text-transform:uppercase;}
 #container #shout p{font-size:24px; margin-bottom:0; padding-bottom:0;}
 
+code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+}
+
 /* ------Main Content-----*/
 
 #container #content{margin-left:auto; margin-right:auto; width:630px; line-height:1.6em;}
@@ -109,6 +111,13 @@ blockquote:after, q:after{content:' �'; font-size:26px; line-height:0;}
 #container #content #services article img{float:left; width:80px; height:80px; margin:0 10px 10px 0; padding:4px; border:1px solid #DEDEDE;}
 #container #content #services article footer{margin:10px 0 0 0;}
 
+code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 105%;
+}
 
 /*----------------------------------------------Footer-------------------------------------*/
 
