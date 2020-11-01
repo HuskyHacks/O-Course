@@ -1,13 +1,3 @@
-<html>
-<head>
-    <title>Cross-Site Scripting (XSS)</title>
-</head>
-<body>
-
-
-</body>
-</html>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -36,11 +26,12 @@
     <div id="container" class="clear">
         <section id="slider"><a href="#"><img src="../../../../../images/demo/log.jpg" alt=""></a></section>
         <section id="shout">
-            <h1>The Logs</h1>
+            <h1>Cross Site Scripting (XSS): The Logs</h1>
             <p>First up, our warm up! The Logs look a lot worse than they really are.</p>
+            <p>That search bar down below this section is vulnerable to XSS. Give it a shot!</p>
 
             <a href="/index.html" class="previous">&laquo; Previous</a>
-            <a href="/vulns/" class="next">Next &raquo;</a>
+            <a href="/vulns/xxe/" class="next">Next &raquo;</a>
         </section>
 
         <!-- content body -->
@@ -146,7 +137,7 @@
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
                 <div id="spoiler4" style="display:none">
-                    Put this into the URL bar: http://[IP]/vulns/xss/welcome.php?q=%3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{dont_cross_me_son}')%22%3E
+                    Put this into the URL bar: <a href="/vulns/xss/welcome.php?q=%3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{dont_cross_me_son}')%22%3E">/vulns/xss/welcome.php?q=%3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{dont_cross_me_son}')%22%3E</a>
                 </div>
 
                 <!-- article 2 -->
