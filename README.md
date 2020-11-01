@@ -23,7 +23,7 @@ A simple web application vulnerability lab made for the HackerOne Veterans Day e
 - [ / ] Frontend/CSS
 - [ / ] Student Guide/Walkthrough
 - [ / ] Hints
-- [ ] Easter Egg/Dirbusting artifact
+- [x] Easter Egg/Dirbusting artifact
 
 # Acknowledgements
 This project was rapid prototyped to provide an engaging course in web application vulnerabilities.
