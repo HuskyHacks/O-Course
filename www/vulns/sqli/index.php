@@ -24,15 +24,15 @@
 <!-- content -->
 <div class="wrapper row2">
     <div id="container" class="clear">
-        <section id="slider"><a href="#"><img src="../../../../../images/demo/lowcrawl.jpg" alt=""></a></section>
+        <section id="slider"><a href="#"><img src="../../../../../images/demo/ropeclimb.jpg" alt=""></a></section>
         <section id="shout">
-            <h1>eXternal XML Entity (XXE) Injection: Low Crawl</h1>
-            <p>Not bad, recruit! Good work on the logs. Now let's move on to something a little more involved.</p>
-            <p>In the section below, you'll find a very, very nice button. This button is vulnerable to XXE. </p>
-            <p>There's an interesting user inside of this container, see if you can find their name by using an XXE injection to access the <code>/etc/passwd</code> file.</p>
-            <p>Ready? Go!</p>
+            <h1>Structured Query Language Injection (SQLI) The Rope Climb</h1>
+            <p> Alright, recruits! We're in the home stretch. Let's finish up strong and head home for chow and formation.</p>
+            <p> The Login form below is vulnerable to SQLi, so let's do this two different ways.</p>
+            <p> Try to inject into the database manually first.</p>
+            <p> Then, blow the doors off with SQLmap and call it a day!</p>
 
-            <a href="/vulns/xss/welcome.php" class="previous">&laquo; Previous</a>
+            <a href="/vulns/" class="previous">&laquo; Previous</a>
             <a href="/vulns/" class="next">Next &raquo;</a>
         </section>
 
@@ -40,7 +40,7 @@
         <div id="content">
             <!-- main content -->
             <section>
-            <?php include 'login.php';?>
+                <?php include 'login.php';?>
             </section>
             <!-- ########################################################################################## -->
             <!-- ########################################################################################## -->
@@ -50,25 +50,23 @@
                 <!-- article 1 -->
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
                 <div id="spoiler1" style="display:none">
-                    <p>How can we identify that this button is vulnerable to XXE? Luckily, the page source code gives it away. Right-click on the Print Greeting button and select 'Inspect Element' to view the page source code. You'll find that the button calls to a Javascript function that uses XML to load the button's greeting.</p>
-                    <p>So, while there is no form to inject into like with the XSS, we can still manipulate the form from the client side of the house. You'll definitely want to use the Burp Repeater for this one!</p>
+
                 </div>
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
-                    Load up Burp Suite and capture the page request when you click the Print Greeting button with the Interceptor. Then, send that page request to the Repeater by right-clicking and selecting 'Send to Repeater.' Now, you can craft a payload to send to the server.
+
                 </div>
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                 <div id="spoiler3" style="display:none">
-                    Remember, XML external entities
+
                 </div>
 
                 <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
                 <div id="spoiler4" style="display:none">
-                    In Burp Repeater, replace the captured XML block with this:
-                    <img src="../../../../../images/demo/xmlscreenshot.png">
-                </div>
+
+                 </div>
 
                 <!-- article 2 -->
 
@@ -86,5 +84,4 @@
 </div>
 </body>
 </html>
-
 

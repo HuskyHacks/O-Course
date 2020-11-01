@@ -19,11 +19,10 @@ A simple web application vulnerability lab made for the HackerOne Veterans day e
 - [x] XXE
 - [x] XSS
 - [x] SQLi
-- [ ] API Bruteforce/Info Disclosure
-- [ ] Frontend/CSS
+- [ / ] API Bruteforce/Info Disclosure
+- [ / ] Frontend/CSS
+- [ / ] Student Guide/Walkthrough
 - [ ] Easter Egg/Dirbusting artifact
-- [ ] Student Guide/Walkthrough
-
 
 # Acknowledgements
 This project was rapid prototyped to provide an engaging course in web application vulnerabilities.

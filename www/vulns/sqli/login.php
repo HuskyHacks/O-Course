@@ -18,12 +18,6 @@
 
 require_once "config.php";
 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit();
-}
-
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
@@ -74,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // Redirect to welcome landing
                         mysqli_stmt_close($stmt);
-                        header("Location: injected.txt");
+                        echo "!!!!!**************** Pwned! :) flag{nice_database_you_got_there} *****************!!!!!!!";
                         exit();
                     } else {
                         $password_err = "Username/password combination not valid";
