@@ -39,7 +39,7 @@
             <h1>The Logs</h1>
             <p>First up, our warm up! The Logs look a lot worse than they really are.</p>
 
-            <a href="/holup.html" class="previous">&laquo; Previous</a>
+            <a href="/index.html" class="previous">&laquo; Previous</a>
             <a href="/vulns/" class="next">Next &raquo;</a>
         </section>
 
@@ -128,11 +128,27 @@
             <!-- ########################################################################################## -->
             <section id="services" class="last clear">
                 <!-- article 1 -->
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">REVEAL ANSWER</button>
-                <div id="spoiler" style="display:none">
-                    %3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{glory_of_the_cross}')%22%3E
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
+                <div id="spoiler1" style="display:none">
+                    XSS occurs by adding HTML or Javascript to a page via client side interaction. Try finding a list of payloads that might work from <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#common-payloads" target="_blank"> PayloadAllTheThings</a>
                 </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
+                <div id="spoiler2" style="display:none">
+                    Notice the URL changes when you perform a search; the 'q=' parameter is added when you search for something. This could be a good place to perform an XSS injection.
+                    For an easy XSS proof of concept, try using an image reference tag that points to something that does not exist. Then, on an error, pop up an alert message box.
                 </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
+                <div id="spoiler3" style="display:none">
+                    Remember to URL encode! <a href="https://meyerweb.com/eric/tools/dencoder/" target="_blank"> URL Encoder/Decoder</a>
+                </div>
+
+                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
+                <div id="spoiler4" style="display:none">
+                    Put this into the URL bar: http://[IP]/vulns/xss/welcome.php?q=%3Cimg%20src%3D%22does-not-exist%22%20onerror%3D%22alert('flag{dont_cross_me_son}')%22%3E
+                </div>
+
                 <!-- article 2 -->
 
             </section>
