@@ -6,4 +6,4 @@ INSERT INTO users (username, name, password) VALUES ('ferris', 'francis erris', 
 INSERT INTO users (username, name, password) VALUES ('aGentlemen', 'andreGentleman', 'theGentlemanApproacheth');
 INSERT INTO users (username, name, password) VALUES ('cosmo', 'cosmo kiely', 'pidgeboi2018');
 INSERT INTO users (username, name, password) VALUES ('flagman', 'marcus p. flagman', 'flag{you_were_only_supposed_to_blow_the_bloody_doors_off}');
-INSERT INTO userInfo (user_id, phone, socialsecnumber, description) VALUES ('610202', '9998888', '999999999', 'flag{private_APIs_are_watching_you');
+INSERT INTO userInfo (user_id, phone, socialsecnumber, description) VALUES ('610202', '9998888', '999999999', 'flag{private_APIs_are_watching_you}');
