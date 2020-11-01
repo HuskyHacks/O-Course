@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         mysqli_stmt_close($stmt);
 
                         echo "PWNED :)";
-                        mysqli_close();
+
                         exit();
                     } else {
                         $password_err = "Username/password combination not valid";
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
 // Close connection
-    mysqli_close($conn);
+    mysqli_close();
 }
 ?>
 
