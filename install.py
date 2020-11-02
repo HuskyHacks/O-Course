@@ -106,6 +106,7 @@ ocourseText = ("""\
 
 
 info = (Fore.BLUE + "[*] ")
+recc = (Fore.YELLOW + "[*] ")
 good = (Fore.GREEN + "[+] ")
 error = (Fore.RED + "[X] ")
 
@@ -183,11 +184,11 @@ def checkCompose():
             sys.exit()
 
 def updateBurpMsg():
-    print(info+"Kali 2020.3 comes pre-installed with Burpsuite Community Edition...\n")
+    print(recc+"Kali 2020.3 comes pre-installed with Burpsuite Community Edition...\n")
     time.sleep(2)
-    print(info+"But I recommend updating to the newest version! Among other things, it has the embedded proxy enabled browser -chef's kiss-\n")
+    print(recc+"But I recommend updating to the newest version! Among other things, it has the embedded proxy enabled browser -chef's kiss-\n")
     time.sleep(2)
-    print(info+"Visit https://portswigger.net/burp/releases/professional-community-2020-9-2\ to download it!\n")
+    print(recc+"Visit https://portswigger.net/burp/releases/professional-community-2020-9-2\ to download it!\n")
     time.sleep(2)
 
 def allSystemsGo():
