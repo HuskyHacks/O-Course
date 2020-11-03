@@ -8,8 +8,8 @@
 
 //In any case, a huge thank you goes out to HackerOne (Jenn and Ben, thank you guys!), and Tom from VetSec for giving me the opportunity to put this together. I had a blast and I hope you enjoyed and learned something.
 
-//Thank you for playing! Now get out there and Hack All the Things!
+//Thank you for playing! Now get out there and flag{Hack_All_the_Things!}
 
 //-HuskyHacks
 
-//flag{super_sleuth_skills!}
+//
