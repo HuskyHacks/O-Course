@@ -18,13 +18,14 @@ I **strongly** recommend bringing a fresh install of the newest build of Kali Li
 In theory, this lab will work on any build of Kali with Docker installed, but I have built and proven every facet of the lab on a fresh install of Kali 2020.3. If you use Kali 2020.3, I **guarantee** that the lab will work exactly as intended!
 
 ## Setup (5 mins)
-On a fresh install of Kali Linux:
 
-- `cd /opt`
-- `sudo git clone https://github.com/HuskyHacks/O-Course`
-- `sudo chmod 755 -R /opt/O-Course && cd O-Course && sudo python3 install.py`
-- Follow the script's prompts (hit enter a few times) until it is done. The final part of the script launches the docker web app.
-- Browse to 172.17.0.1 to launch the course!
+In your fresh install of Kali Linux:
+
+1. Right-click on the Desktop and select "Open Terminal Here"
+2. In the command prompt, enter the following: `cd /opt && sudo git clone https://github.com/HuskyHacks/O-Course`
+3. When that has finished, in the command prompt, enter the following: `sudo chmod 755 -R /opt/O-Course && cd O-Course && sudo python3 install.py`
+4. Follow the script's prompts (hit enter a few times) until it is done. The final part of the script launches the docker web app.
+5. Browse to `172.17.0.1` to launch the course!
 
 ## To Do
 
@@ -35,7 +36,7 @@ On a fresh install of Kali Linux:
 - [x] SQLi
 - [x] API Bruteforce/Info Disclosure
 - [x] Easter Egg/Dirbusting artifact
-- [ / ] Frontend/CSS
+- [x] Frontend/CSS
 - [ / ] Student Guide/Walkthrough
 - [ / ] Hints
 
