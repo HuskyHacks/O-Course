@@ -28,6 +28,7 @@
         <section id="shout">
             <h1>Structured Query Language Injection (SQLI) The Rope Climb</h1>
             <p> Alright, recruits! We're in the home stretch. Let's finish up strong and head home for chow and formation.</p>
+            <p> The rope climb is the grand finale, so climb up there and ring that bell!</p>
             <p> The Login form below is vulnerable to SQLi, so let's do this two different ways.</p>
             <p> Try to inject into the database manually first.</p>
             <p> Then, blow the doors off with SQLmap and call it a day!</p>
