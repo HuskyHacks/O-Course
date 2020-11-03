@@ -40,25 +40,25 @@
             <!-- main content -->
             <section id="services" class="last clear">
                 <!-- article 1 -->
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
                 <div id="spoiler1" style="display:none">
                     <p>The API is not immediately accessible from the <code>/vulns/</code> directory. In fact, it's a few directories down. APIs are often nested inside of many sub-directories. So you'll need to drill down a little bit to find it.</p>
                     <p>Try using dirb: <code>dirb http://[IP]/vulns/</code></p>
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
                 <p> When you dirbust the <code>/vulns/</code> directory, dirb will find a number of sub-directories and recursively search inside of them.</p>
                     <p> The API can be found by visiting/CURLing <code>/vulns/api/v1/monitoring/accounts/</code></p>
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                 <div id="spoiler3" style="display:none">
                     <p> The API responds to a basic HTTP request a certain way. If you just visit or CURL the page by default, you are making a GET request to this REST API. If you review the source code of the API, you can see that it can also handle a POST request to add users to the database if it is given certain parameters.</p>
                     <p> So, if the author of this API programmed it to handle GET requests and POST requests that have paramerters, what else could we do to poke at the API?</p>
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">REVEAL ANSWER</button>
                 <div id="spoiler4" style="display:none">
                     <p> Enter: <code> curl -X POST http://[IP]/vulns/api/v1/monitoring/accounts/</code> to POST to the API with no parameters. This returns something unexpected!</p>
                 </div>

@@ -1,4 +1,4 @@
-#! #!/usr/bin/env python3
+#!/usr/bin/env python3
 ###############################################################################
 #                                                                             #
 #                     HuskyHacks | HackerOne | The O-Course                   #

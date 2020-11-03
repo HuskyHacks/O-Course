@@ -49,27 +49,27 @@
             <!-- ########################################################################################## -->
             <section id="services" class="last clear">
                 <!-- article 1 -->
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
                 <div id="spoiler1" style="display:none">
 
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
 
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                 <div id="spoiler3" style="display:none">
 
                 </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">MANUAL: REVEAL ANSWER</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">MANUAL: REVEAL ANSWER</button>
                 <div id="spoiler4" style="display:none">
 
                  </div>
 
-                <button class="center" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none') {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">SQLMAP: REVEAL ANSWER</button>
+                <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none') {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">SQLMAP: REVEAL ANSWER</button>
                 <div id="spoiler5" style="display:none">
 
                 </div>
