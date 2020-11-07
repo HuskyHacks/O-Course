@@ -27,6 +27,8 @@
         <section id="slider"><a href="#"><img src="../../../../../images/demo/ropeclimb.jpg" alt=""></a></section>
         <section id="shout">
             <h1>Structured Query Language Injection (SQLI) The Rope Climb</h1>
+            <h2><a href="https://huskyhacks.github.io/vulns/sqli" target="_blank">Student Guide: SQL Injection</a></h2>
+            <h2><a href="https://huskyhacks.github.io/tools/sqlmap" target="_blank">Student Guide: SQLmap</a></h2>
             <p> Alright, recruits! We're in the home stretch. Let's finish up strong and head home for chow and formation.</p>
             <p> The rope climb is the grand finale, so climb up there and ring that bell!</p>
             <p> The Login form below is vulnerable to SQLi, so let's do this two different ways.</p>

@@ -27,6 +27,8 @@
                             <section id="slider"><a href="#"><img src="../../../../../images/demo/lowcrawl.jpg" alt=""></a></section>
                             <section id="shout">
                                 <h1>eXternal XML Entity (XXE) Injection: Low Crawl</h1>
+                                <h2><a href="https://huskyhacks.github.io/vulns/xxe" target="_blank">Student Guide: External XML Entity Injection (XXE)</a></h2>
+                                <h2><a href="https://huskyhacks.github.io/tools/burpsuite" target="_blank">Student Guide: FoxyProxy and Burpsuite</a></h2>
                                 <p>Not bad, recruit! Good work on the logs. Now let's move on to something a little more involved.</p>
                                 <p>In the section below, you'll find a very, very nice button. This button is vulnerable to XXE. </p>
                                 <p>There's an interesting user inside of this container, see if you can find their name by using an XXE injection to access the <code>/etc/passwd</code> file.</p>

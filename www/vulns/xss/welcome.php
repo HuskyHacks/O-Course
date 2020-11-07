@@ -27,6 +27,7 @@
         <section id="slider"><a href="#"><img src="../../../../../images/demo/log.jpg" alt=""></a></section>
         <section id="shout">
             <h1>Cross Site Scripting (XSS): The Logs</h1>
+            <h2><a href="https://huskyhacks.github.io/vulns/xss" target="_blank">Student Guide: Cross-site Scripting (XSS)</a></h2>
             <p>First up, our warm up! The Logs look a lot worse than they really are.</p>
             <p>That search bar down below this section is vulnerable to XSS. Give it a shot!</p>
 
