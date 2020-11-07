@@ -75,6 +75,7 @@
                     <p>Follow the prompts and hit enter until SQLmap identifies the injection points. Then, enter the following syntax to enumerate the databases: <code>sqlmap -r page.req --dbs</code></p>
                     <p>Finally, once the databases are enumerated and you have identified the <code>website</code> database, perform a SQLmap dump: <code>sqlmap -r page-req --dump -D website</code></p>
                     <p>Make sure to read the contents of the dumped tables to find the flag!</p>
+                </div>
                 <!-- article 2 -->
 
             </section>
