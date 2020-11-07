@@ -99,7 +99,7 @@ ocourseText = ("""\
  | (_) |___| (__/ _ \ || | '_(_-</ -_)
   \___/     \___\___/\_,_|_| /__/\___|
 
-            An OWASP Top 10 Obstacle Course for Beginners"
+            An OWASP Top 10 Obstacle Course for Beginners
                       """)
 
 

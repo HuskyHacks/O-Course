@@ -40,6 +40,10 @@ In your fresh install of Kali Linux:
 - [ / ] Student Guide/Walkthrough
 - [ / ] Hints
 
+## Hall of Fame
+The O-Course was initially presented at the HackerOne Veterans in Security Community Day on Nov 10th, 2020. The following is a list of the first 10 participants that submitted all flags in the event:
+
+- Name/Handle/Note
 
 ## Acknowledgements
 This project was rapid prototyped to provide an engaging course in web application vulnerabilities.
@@ -52,3 +56,5 @@ Huge thank you to:
 - https://github.com/BrunoMendes41/simple-php-restful-api
 - https://medium.com/@shashanksrivastava/create-a-rest-api-using-php-mysql-60ba1ad918d2
 - OS Templates for the website template and CSS! https://www.os-templates.com/
+
+

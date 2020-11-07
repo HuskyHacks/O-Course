@@ -56,23 +56,25 @@
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
-
+                    <p> SQLi is achieved by escaping the query that is being used to gather the information from the back-end. What can you insert into the username field to close off the query?</p>
                 </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                 <div id="spoiler3" style="display:none">
-
+                    <p>Use a single quote to close off the query, so the username parameter inserts <code>admin'</code> into the query. Now, think about what other SQL syntax you can inject into the query to break the logical flow of the application. and a logical condition to evaluate to be true. <code>1=1</code> is a pretty good one! And make sure you comment out the remaining query.</p>
                 </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">MANUAL: REVEAL ANSWER</button>
                 <div id="spoiler4" style="display:none">
-
+                    <p> In the <code>username</code> field, enter: <code>admin' OR 1=1 -- -</code>. Them check the bottom of the page for the flag! </p>
                  </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none') {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">SQLMAP: REVEAL ANSWER</button>
                 <div id="spoiler5" style="display:none">
-
-                </div>
+                    <p>Use the Burp Intercept tool to capture a request to the page and save it as <code>page.req</code>. Then, pass this to SQLmap with the following syntax: <code>sqlmap -r page.req --level=5 --risk=3.</code></p>
+                    <p>Follow the prompts and hit enter until SQLmap identifies the injection points. Then, enter the following syntax to enumerate the databases: <code>sqlmap -r page.req --dbs</code></p>
+                    <p>Finally, once the databases are enumerated and you have identified the <code>website</code> database, perform a SQLmap dump: <code>sqlmap -r page-req --dump -D website</code></p>
+                    <p>Make sure to read the contents of the dumped tables to find the flag!</p>
                 <!-- article 2 -->
 
             </section>

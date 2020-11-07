@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // Redirect to welcome landing
                         mysqli_stmt_close($stmt);
-                        echo "!!!!!**************** Pwned! :) flag{nice_database_you_got_there} *****************!!!!!!!";
+                        echo "!!!!!** PWNED! :) flag{nice_database_you_got_there} ******!!!!!!!";
                         exit();
                     } else {
                         $password_err = "Username/password combination not valid";
