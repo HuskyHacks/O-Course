@@ -51,17 +51,17 @@
                 <!-- article 1 -->
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">HINT 1</button>
                 <div id="spoiler1" style="display:none">
-
+                    <p> SQLi is achieved by escaping the query that is being used to gather the information from the back-end. What can you insert into the username field to close off the query?</p>
                 </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">HINT 2</button>
                 <div id="spoiler2" style="display:none">
-                    <p> SQLi is achieved by escaping the query that is being used to gather the information from the back-end. What can you insert into the username field to close off the query?</p>
+                    <p>Use a single quote to close off the query, so the username parameter inserts <code>admin'</code> into the query. Now, think about what other SQL syntax you can inject into the query to break the logical flow of the application.
                 </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">HINT 3</button>
                 <div id="spoiler3" style="display:none">
-                    <p>Use a single quote to close off the query, so the username parameter inserts <code>admin'</code> into the query. Now, think about what other SQL syntax you can inject into the query to break the logical flow of the application. and a logical condition to evaluate to be true. <code>1=1</code> is a pretty good one! And make sure you comment out the remaining query.</p>
+                     Try using a a logical condition that would be evaluated by the database to be true. <code>1=1</code> is a pretty good one! And make sure you comment out the remaining query.</p>
                 </div>
 
                 <button class="button" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">MANUAL: REVEAL ANSWER</button>
