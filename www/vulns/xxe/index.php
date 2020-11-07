@@ -97,6 +97,7 @@
                                     <div id="spoiler4" style="display:none">
                                         In Burp Repeater, replace the captured XML block with this:
                                         <img src="../../../../../images/demo/xmlscreenshot.png">
+                                        <p> Inspect the contents of <code>/etc/passwd</code> to find the flag!</p>
                                     </div>
 
                                     <!-- article 2 -->
