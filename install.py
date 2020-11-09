@@ -111,8 +111,6 @@ ocourseText = ("""\
 
 accessibleOcourseText = "The O-Course: An An OWASP Top 10 Obstacle Course for Beginners"
 
-
-
 info = (Fore.BLUE + "[*] ")
 recc = (Fore.YELLOW + "[*] ")
 good = (Fore.GREEN + "[+] ")

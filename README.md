@@ -19,6 +19,8 @@ In theory, this lab will work on any build of Kali with Docker installed, but I 
 
 ## Setup (5 mins)
 
+**Note**: there is an accessible argument for the install script to make it a little more screenreader friendly. Simply pass it the `--accessible` argument to run without extra ASCII art.
+
 In your fresh install of Kali Linux:
 
 1. Right-click on the Desktop and select "Open Terminal Here"
