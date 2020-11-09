@@ -14,7 +14,10 @@ from subprocess import Popen, PIPE
 import os
 import argparse
 
-
+parser = argparse.ArgumentParser()
+parser.add_argument("--accessible", help="Runs install script in accessible mode",
+                    action="store_true")
+args = parser.parse_args()
 
 logo = ("""\
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -80,6 +83,9 @@ logotext = ("""\
                                     Production...
                       """)
 
+accessibleLogoText = "A HuskyHacks Production"
+
+
 h1logotext = ("""\
 In collaboration with...
 
@@ -90,6 +96,7 @@ In collaboration with...
 
 
                       """)
+accessibleH1LogoText = "In collaboration with HackerOne"
 
 ocourseText = ("""\
 
@@ -102,6 +109,7 @@ ocourseText = ("""\
             An OWASP Top 10 Obstacle Course for Beginners
                       """)
 
+accessibleOcourseText = "The O-Course: An An OWASP Top 10 Obstacle Course for Beginners"
 
 
 
@@ -114,7 +122,7 @@ def is_root():
     if os.geteuid() == 0:
         return 0
     else:
-        print(info+"You need to run the install script as root! Usage: sudo python3 install.py")
+        print(info+"You need to run the install script as root!\n[*] Usage: sudo python3 install.py [--accessible]")
         exit()
 
 def intro():
@@ -126,6 +134,20 @@ def intro():
     input("(Press Enter to continue...)")
 
     print(ocourseText)
+    input("(Press Enter to begin setup...)")
+    print("\n")
+    print (info+"Setting up your lab now...")
+    time.sleep(2)
+    print ("\n"+info+"Checking Docker and Docker-compose...")
+    time.sleep(2)
+    print(Style.RESET_ALL)
+
+def accessibleIntro():
+    print(accessibleLogoText)
+    input("(Press Enter to continue...)")
+    print(accessibleH1LogoText)
+    input("(Press Enter to continue...)")
+    print(accessibleOcourseText)
     input("(Press Enter to begin setup...)")
     print("\n")
     print (info+"Setting up your lab now...")
@@ -202,6 +224,16 @@ def allSystemsGo():
 def launchDocker():
     sub.call(['docker-compose up'], shell=True)
 
+def accessibleMain():
+    is_root()
+    accessibleIntro()
+    checkDocker()
+    checkCompose()
+    updateBurpMsg()
+    allSystemsGo()
+    launchDocker()
+    exit()
+
 def main():
     is_root()
     intro()
@@ -212,5 +244,7 @@ def main():
     launchDocker()
     exit()
 
-if __name__ == "__main__":
+if args.accessible:
+    accessibleMain()
+elif __name__ == "__main__":
     main()

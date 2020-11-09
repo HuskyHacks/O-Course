@@ -39,6 +39,7 @@ In your fresh install of Kali Linux:
 - [x] Frontend/CSS
 - [x] Student Guide/Walkthrough
 - [x] Hints
+- [x] Accessibility/install script usage and flags
 
 ## Hall of Fame
 The O-Course was initially presented at the HackerOne Veterans in Security Community Day on Nov 10th, 2020. The following is a list of the first 10 participants that submitted all flags in the event:
