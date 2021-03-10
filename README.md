@@ -47,6 +47,7 @@ In your fresh install of Kali Linux:
 The O-Course was initially presented at the HackerOne Veterans in Security Community Day on Nov 10th, 2020. The following is a list of the first 10 participants that submitted all flags in the event:
 
 1. Brian/BrokenSkull
+2. Mike2_I
 
 ## Acknowledgements
 This project was rapid prototyped to provide an engaging course in web application vulnerabilities.
